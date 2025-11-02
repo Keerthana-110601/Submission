@@ -15,6 +15,10 @@ h2{
     font-size: 32px;
     line-height: 44px;
 }
+h2::first-letter{
+    font-size: 2.5em;
+    color: red;
+}
 p{ 
     font-size: 22px;
     line-height: 33px;
@@ -72,6 +76,73 @@ header span{
     text-align: justify;
     margin-bottom: 15px;
   }
+  .tech-section {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tech-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .tech-title {
+    flex: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+  }
+  /* ✅ Double Tick for Front-End */
+.double-tick::after {
+    content: "✔️✔️";
+    margin-left: 6px;
+    font-size: 1.1rem;
+  }
+  
+  /* ✔️ Single Tick for Backend & Databases */
+  .single-tick::after {
+    content: "✔️";
+    margin-left: 6px;
+    font-size: 1.1rem;
+  }
+  
+  .tech-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+  }
+  
+  .tech-list li {
+    background: #e8f0fe;
+    border: 1px solid #a5bdfc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 5px; /* stack vertically with small gap */
+    text-align: left;
+    font-size: 0.9rem;
+    color: #222;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .tech-list li:hover {
+    background-color: #d6e4ff;
+    transform: scale(1.03);
+  }
+  
+  
 input,textarea{
     display: block;
     width: 320px;
@@ -117,6 +188,15 @@ audio, video {
     outline: 0;
     margin-top: 25px;
 }
+.github-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;      /* makes the logo round */
+    margin-right: 8px;       /* small space before text */
+    vertical-align: middle;  /* aligns nicely with text */
+  }
+  
+  
 #contact button:hover{
     background-color: orange;
     cursor: pointer;
@@ -170,11 +250,46 @@ hr{
     width: 100%;
     gap: 15px;
   }
-footer{
-    background-color: rgb(239, 132, 132);
-}
-footer p{
-    font-size: 12px;
-    margin: 0;
-    color:bisque
-}
+  .footer {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    color: #222;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Strongly override button styles */
+  footer a.footer-link {
+    all: unset !important;
+    display: inline-block !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  
+  /* GitHub logo styling */
+  .github-logo-footer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    margin: 8px auto 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .github-logo-footer:hover {
+    filter: invert(34%) sepia(98%) saturate(1237%) hue-rotate(203deg) brightness(95%) contrast(96%);
+    transform: scale(1.1);
+  }
+  
+  
